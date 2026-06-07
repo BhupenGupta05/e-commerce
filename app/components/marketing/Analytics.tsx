@@ -1,8 +1,8 @@
-import { analytics } from "@/app/config/analytics";
+import { analytics } from "@/app/config/marketing/analytics";
 
 export default function Analytics() {
   return (
-    <section className="mt-18 mx-6 px-2 md:mx-6 lg:mx-8">
+    <section className="mt-18 mx-6 px-2 md:mx-6 lg:mx-0">
       <h2 className="text-2xl font-semibold lg:text-3xl md:mx-6 lg:mx-10">
         Live Analytics
       </h2>

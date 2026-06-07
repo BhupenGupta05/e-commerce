@@ -14,7 +14,7 @@ export default function FeaturedRelease() {
           className="h-auto max-h-100 object-cover w-full grayscale contrast-110 md:max-h-120 lg:max-h-130"
         />
 
-        <div className="absolute bottom-8 left-8 text-white">
+        <div className="absolute bottom-8 left-8 text-on-primary">
           <p className="uppercase text-xs md:text-sm">
             Featured Release
           </p>

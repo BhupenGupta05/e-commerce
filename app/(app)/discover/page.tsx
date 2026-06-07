@@ -1,7 +1,7 @@
-export default function DiscoverPage() {
+import DiscoverPage from "@/app/components/discover/DiscoverPage";
+
+export default function Page() {
     return (
-        <div>
-            Discover
-        </div>
+        <DiscoverPage />
     )
 }

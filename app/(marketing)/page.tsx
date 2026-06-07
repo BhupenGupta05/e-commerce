@@ -6,7 +6,7 @@ import Analytics from "../components/marketing/Analytics";
 export default function MarketingPage() {
   return (
     <>
-      <div className="flex flex-col md:mt-10 gap-8 md:flex-row md:justify-center md:mx-6 md:gap-10">
+      <div className="flex flex-col md:mt-10 gap-8 md:flex-row md:justify-center md:mx-6 md:gap-10 lg:gap-24">
         <div className="md:w-[30%] md:flex md:justify-center md:items-center">
           <Hero />
         </div>

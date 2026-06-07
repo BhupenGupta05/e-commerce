@@ -1,6 +1,6 @@
 "use client";
 
-import { menu } from "@/app/config/menu";
+import { menu } from "@/app/config/marketing/menu";
 import Link from "next/link";
 import { RxCross2 } from "react-icons/rx";
 
@@ -21,11 +21,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             )}
 
             <div
-                className={`fixed inset-0 z-60 bg-white transition-transform duration-300 ease-in-out md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"
+                className={`fixed inset-0 z-60 bg-on-primary transition-transform duration-300 ease-in-out md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"
                     }`}
             >
-                <div className="flex justify-between items-center px-6 py-2 border-b border-gray-200">
-                    <Link href="/" className="text-xl font-bold text-black tracking-tighter">
+                <div className="flex justify-between items-center px-6 py-2 border-b border-border">
+                    <Link href="/" className="text-xl font-bold text-primary tracking-tighter">
                         StoreFront
                     </Link>
                     <button
@@ -40,20 +40,20 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 <nav className="flex flex-col px-6 py-4 space-y-4">
                     {menu.map((item) => (
                         <a key={item.label}
-                            className="text-xs font-semibold uppercase tracking-wide text-gray-700 hover:text-black transition-colors"
+                            className="text-xs font-semibold uppercase tracking-wide text-text hover:text-primary transition-colors"
                             href={item.href}
                         >
                             {item.label}
                         </a>
                     ))}
 
-                    <hr className="border-gray-200 my-2" />
+                    <hr className="border-border my-2" />
 
                     <div className="flex flex-col gap-4 mt-4 text-center">
-                        <Link href="/login" className="bg-black text-white py-3 px-4 text-xs uppercase tracking-widest rounded hover:bg-black/90 transition-colors cursor-pointer">
+                        <Link href="/login" className="bg-primary text-on-primary py-3 px-4 text-xs uppercase tracking-widest rounded hover:bg-primary/90 transition-colors cursor-pointer">
                             Get Started
                         </Link>
-                        <Link href="/login" className="border border-black text-black py-3 px-4 text-xs uppercase tracking-widest rounded hover:bg-black hover:text-white transition-colors cursor-pointer">
+                        <Link href="/login" className="border border-primary text-primary py-3 px-4 text-xs uppercase tracking-widest rounded hover:bg-primary hover:text-on-primary transition-colors cursor-pointer">
                             Sign In
                         </Link>
                     </div>

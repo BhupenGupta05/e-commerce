@@ -1,5 +1,5 @@
-// import Sidebar from "@/components/app/sidebar";
-// import Topbar from "@/components/app/topbar";
+import BottomNav from "../components/discover/BottomNav";
+import Header from "../components/discover/Header";
 
 export default function AppLayout({
   children,
@@ -7,18 +7,16 @@ export default function AppLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen">
-      <aside className="hidden lg:block">
-        {/* <Sidebar /> */}
-      </aside>
+    <div className="flex flex-col min-h-screen">
+      <Header />
 
-      <div className="flex flex-1 flex-col">
-        {/* <Topbar /> */}
-
-        <main className="flex-1">
-          {children}
-        </main>
-      </div>
+      <main className="flex-1">
+        {children}
+      </main>
+      <footer className="md:hidden">
+        <BottomNav />
+      </footer>
     </div>
   );
 }
+

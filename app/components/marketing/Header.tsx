@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import MobileMenu from "./MobileMenu";
-import { menu } from "@/app/config/menu";
+import { menu } from "@/app/config/marketing/menu";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className="px-6 py-6 md:px-7 md:py-7 lg:px-8 lg:py-8">
       <nav
-        className="flex items-center justify-between mx-auto md:h-16 md:grid md:grid-cols-3 md:max-w-7xl md:items-center">
+        className="flex items-center justify-between mx-auto md:h-16 lg:h-12 md:grid md:grid-cols-3 md:max-w-8xl md:items-center">
 
         <div className="flex items-center justify-start">
           <Link
@@ -32,7 +32,7 @@ export default function Header() {
             <li key={item.label}>
               <Link
                 href={item.href}
-                className="text-md hover:text-black lg:text-base transition-colors whitespace-nowrap"
+                className="text-md hover:text-primary lg:text-base transition-colors whitespace-nowrap"
               >
                 {item.label}
               </Link>
@@ -42,17 +42,17 @@ export default function Header() {
 
         <div className="flex items-center justify-end gap-4">
           <div className="hidden items-center gap-3 md:flex lg:gap-3">
-            <Link href="/login" className="text-sm hover:text-white text-black py-2 px-4 border uppercase tracking-widest rounded hover:bg-black transition-colors cursor-pointer whitespace-nowrap lg:px-4">
+            <Link href="/login" className="text-sm hover:text-on-primary text-primary py-2 px-4 border uppercase tracking-widest rounded hover:bg-primary transition-colors cursor-pointer whitespace-nowrap lg:px-4">
               Sign In
             </Link>
-            <Link href="/login" className="rounded px-4 py-2 text-sm hover:bg-black/90 bg-black border text-white uppercase tracking-widest transition-colors cursor-pointer whitespace-nowrap lg:px-4">
+            <Link href="/login" className="rounded px-4 py-2 text-sm hover:bg-primary/90 bg-primary border text-on-primary uppercase tracking-widest transition-colors cursor-pointer whitespace-nowrap lg:px-4">
               Get Started
             </Link>
           </div>
 
 
           <button
-            aria-label="Open Menu"
+            aria-label="Open navigation Menu"
             className="cursor-pointer md:hidden"
             onClick={() => setMenuOpen(true)}>
             <RxHamburgerMenu size={24} />

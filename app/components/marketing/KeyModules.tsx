@@ -1,8 +1,8 @@
-import { modules } from "@/app/config/modules";
+import { modules } from "@/app/config/marketing/modules";
 
 export default function KeyModules() {
   return (
-    <section className="mt-18 px-1 mx-6 lg:mx-8">
+    <section className="mt-18 px-1 mx-6 lg:mx-0">
       <div className="md:mx-6 lg:mx-10">
         <h2 className="text-2xl font-semibold md:text-2xl lg:text-3xl">
           Key Modules

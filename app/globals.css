@@ -1,1 +1,33 @@
 @import "tailwindcss";
+@import "../app/styles/theme.css";
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-on-primary: var(--color-on-primary);
+
+  --color-secondary: var(--color-secondary);
+  --color-on-secondary: var(--color-on-secondary);
+
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+
+  --color-border: var(--color-border);
+
+  --color-error: var(--color-error);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+
+  --shadow-card: var(--shadow-card);
+  --shadow-hover: var(--shadow-hover);
+  --shadow-ai: var(--shadow-ai);
+}
+
+html {
+  scroll-behavior: smooth;
+}
