@@ -1,7 +1,7 @@
-import Hero from "../components/marketing/Hero";
-import FeaturedRelease from "../components/marketing/FeaturedRelease";
-import KeyModules from "../components/marketing/KeyModules";
-import Analytics from "../components/marketing/Analytics";
+import Hero from "./_components/Hero";
+import FeaturedRelease from "./_components/FeaturedRelease";
+import KeyModules from "./_components/KeyModules";
+import Analytics from "./_components/Analytics";
 
 export default function MarketingPage() {
   return (

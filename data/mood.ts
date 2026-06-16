@@ -1,34 +1,6 @@
 import { Mood } from "@/types/mood";
 
-// export const moods: Mood[] = [
-//   {
-//     id: "1",
-//     title: "Focused Productivity",
-//     description: "Tools for deep work and clarity.",
-//     image: "/tote.png",
-//     cta: "Explore Mood",
-//   },
-//   {
-//     id: "2",
-//     title: "Mindful Wellness",
-//     description: "Balance your spirit and space.",
-//     image: "/tote.png",
-//   },
-//   {
-//     id: "3",
-//     title: "Sophisticated Evening",
-//     description: "",
-//     image: "/tote.png",
-//   },
-//   {
-//     id: "4",
-//     title: "Weekend Escape",
-//     description: "",
-//     image: "/tote.png",
-//   },
-// ];
-
-export const moods = [
+export const moods: Mood[] = [
   {
     id: "1",
     title: "Cozy Reading",

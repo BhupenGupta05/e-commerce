@@ -1,5 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap');
 @import "tailwindcss";
 @import "../app/styles/theme.css";
+@import "tw-animate-css";
+
+
+/*
+ * globals.css — Design Token CSS Custom Properties
+ * Generated from DESIGN.md (Intelligent Commerce System)
+ *
+ * HOW TO USE:
+ *   1. Import this file once at the root of your app (e.g. in layout.tsx or _app.tsx).
+ *   2. All tokens are available as CSS variables throughout your app.
+ *   3. Tailwind utilities (bg-primary, text-secondary, etc.) reference these
+ *      variables via tailwind.config.js — so changing a color here propagates everywhere.
+ */
+
+
+/* ─────────────────────────────────────────────
+   ROOT TOKENS
+   ───────────────────────────────────────────── */
+:root {
+
+  /* ── Colors: Surface ── */
+  --color-surface:                  #f7f9fb;
+  --color-surface-dim:              #d8dadc;
+  --color-surface-bright:           #f7f9fb;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low:    #f2f4f6;
+  --color-surface-container:        #eceef0;
+  --color-surface-container-high:   #e6e8ea;
+  --color-surface-container-highest:#e0e3e5;
+  --color-on-surface:               #191c1e;
+  --color-on-surface-variant:       #45464d;
+  --color-inverse-surface:          #2d3133;
+  --color-inverse-on-surface:       #eff1f3;
+  --color-surface-variant:          #e0e3e5;
+  --color-surface-tint:             #565e74;
+
+  /* ── Colors: Outline ── */
+  --color-outline:                  #76777d;
+  --color-outline-variant:          #c6c6cd;
+
+  /* Border */
+  --color-border: #d1d5dc;
+
+  /* ── Colors: Primary (Deep Charcoal) ── */
+  --color-primary:                  #000000;
+  --color-on-primary:               #ffffff;
+  --color-primary-container:        #131b2e;
+  --color-on-primary-container:     #7c839b;
+  --color-inverse-primary:          #bec6e0;
+  --color-primary-fixed:            #dae2fd;
+  --color-primary-fixed-dim:        #bec6e0;
+  --color-on-primary-fixed:         #131b2e;
+  --color-on-primary-fixed-variant: #3f465c;
+
+  /* ── Colors: Secondary (Intelligent Emerald) ── */
+  --color-secondary:                #006c49;
+  --color-on-secondary:             #ffffff;
+  --color-secondary-container:      #6cf8bb;
+  --color-on-secondary-container:   #00714d;
+  --color-secondary-fixed:          #6ffbbe;
+  --color-secondary-fixed-dim:      #4edea3;
+  --color-on-secondary-fixed:       #002113;
+  --color-on-secondary-fixed-variant: #005236;
+
+  /* ── Colors: Tertiary ── */
+  --color-tertiary:                 #000000;
+  --color-on-tertiary:              #ffffff;
+  --color-tertiary-container:       #0b1c30;
+  --color-on-tertiary-container:    #75859d;
+  --color-tertiary-fixed:           #d3e4fe;
+  --color-tertiary-fixed-dim:       #b7c8e1;
+  --color-on-tertiary-fixed:        #0b1c30;
+  --color-on-tertiary-fixed-variant:#38485d;
+
+  /* ── Colors: Semantic ── */
+  --color-error:                    #ba1a1a;
+  --color-on-error:                 #ffffff;
+  --color-error-container:          #ffdad6;
+  --color-on-error-container:       #93000a;
+
+  /* ── Colors: Background ── */
+  --color-background:               #f7f9fb;
+  --color-on-background:            #191c1e;
+
+  /* ── Elevation / Shadows ── */
+  --shadow-level-0:                 none;
+  --shadow-level-1:                 0px 0px 0px 1px #e2e8f0;
+  --shadow-level-2:                 0px 4px 20px rgba(15, 23, 42, 0.05);
+  --shadow-ai-glow:                 0px 0px 15px rgba(16, 185, 129, 0.1);
+
+  /* ── AI Highlight color (used for glows & badge tints) ── */
+  --color-ai-highlight:             rgba(16, 185, 129, 0.1);
+  --color-ai-accent:                rgba(16, 185, 129, 1);
+
+  /* ── Border Radius ── */
+  --radius-sm:      0.125rem;  /*  2px — base elements */
+  --radius-default: 0.25rem;   /*  4px — buttons, inputs */
+  --radius-md:      0.375rem;  /*  6px */
+  --radius-lg:      0.5rem;    /*  8px — cards, containers */
+  --radius-xl:      0.75rem;   /* 12px — AI badges */
+  --radius-full:    9999px;    /* pill (avoid for primary CTAs) */
+
+  /* ── Spacing (8px base scale) ── */
+  --spacing-base:           8px;
+  --spacing-container-max:  1280px;
+  --spacing-gutter:         24px;
+  --spacing-margin-mobile:  16px;
+  --spacing-margin-desktop: 48px;
+  --spacing-stack-sm:       12px;
+  --spacing-stack-md:       24px;
+  --spacing-stack-lg:       48px;
+
+  /* ── Typography: Font Family ── */
+  --font-geist: 'Geist', ui-sans-serif, system-ui, sans-serif;
+
+  /* ── Typography: Display LG (desktop) ── */
+  --text-display-lg-family:   var(--font-geist);
+  --text-display-lg-size:     48px;
+  --text-display-lg-weight:   600;
+  --text-display-lg-lh:       56px;
+  --text-display-lg-tracking: -0.02em;
+
+  /* ── Typography: Display LG (mobile) ── */
+  --text-display-lg-mobile-family:   var(--font-geist);
+  --text-display-lg-mobile-size:     32px;
+  --text-display-lg-mobile-weight:   600;
+  --text-display-lg-mobile-lh:       40px;
+  --text-display-lg-mobile-tracking: -0.01em;
+
+  /* ── Typography: Headline MD ── */
+  --text-headline-md-family:   var(--font-geist);
+  --text-headline-md-size:     24px;
+  --text-headline-md-weight:   500;
+  --text-headline-md-lh:       32px;
+  --text-headline-md-tracking: -0.01em;
+
+  /* ── Typography: Body LG ── */
+  --text-body-lg-family:  var(--font-geist);
+  --text-body-lg-size:    18px;
+  --text-body-lg-weight:  400;
+  --text-body-lg-lh:      28px;
+
+  /* ── Typography: Body MD ── */
+  --text-body-md-family:  var(--font-geist);
+  --text-body-md-size:    16px;
+  --text-body-md-weight:  400;
+  --text-body-md-lh:      24px;
+
+  /* ── Typography: Label SM ── */
+  --text-label-sm-family:   var(--font-geist);
+  --text-label-sm-size:     14px;
+  --text-label-sm-weight:   500;
+  --text-label-sm-lh:       20px;
+  --text-label-sm-tracking: 0.05em;
+
+  /* ── Typography: Caption ── */
+  --text-caption-family:  var(--font-geist);
+  --text-caption-size:    12px;
+  --text-caption-weight:  400;
+  --text-caption-lh:      16px;
+}
+
+/* ─────────────────────────────────────────────
+   CONVENIENCE TYPOGRAPHY UTILITY CLASSES
+   Use these directly in HTML or alongside Tailwind.
+   ───────────────────────────────────────────── */
+
+.text-display-lg {
+  font-family:     var(--text-display-lg-family);
+  font-size:       var(--text-display-lg-size);
+  font-weight:     var(--text-display-lg-weight);
+  line-height:     var(--text-display-lg-lh);
+  letter-spacing:  var(--text-display-lg-tracking);
+}
+
+@media (max-width: 768px) {
+  .text-display-lg {
+    font-size:      var(--text-display-lg-mobile-size);
+    font-weight:    var(--text-display-lg-mobile-weight);
+    line-height:    var(--text-display-lg-mobile-lh);
+    letter-spacing: var(--text-display-lg-mobile-tracking);
+  }
+}
+
+.text-headline-md {
+  font-family:    var(--text-headline-md-family);
+  font-size:      var(--text-headline-md-size);
+  font-weight:    var(--text-headline-md-weight);
+  line-height:    var(--text-headline-md-lh);
+  letter-spacing: var(--text-headline-md-tracking);
+}
+
+.text-body-lg {
+  font-family:  var(--text-body-lg-family);
+  font-size:    var(--text-body-lg-size);
+  font-weight:  var(--text-body-lg-weight);
+  line-height:  var(--text-body-lg-lh);
+}
+
+.text-body-md {
+  font-family:  var(--text-body-md-family);
+  font-size:    var(--text-body-md-size);
+  font-weight:  var(--text-body-md-weight);
+  line-height:  var(--text-body-md-lh);
+}
+
+.text-label-sm {
+  font-family:    var(--text-label-sm-family);
+  font-size:      var(--text-label-sm-size);
+  font-weight:    var(--text-label-sm-weight);
+  line-height:    var(--text-label-sm-lh);
+  letter-spacing: var(--text-label-sm-tracking);
+  text-transform: uppercase;
+}
+
+.text-caption {
+  font-family:  var(--text-caption-family);
+  font-size:    var(--text-caption-size);
+  font-weight:  var(--text-caption-weight);
+  line-height:  var(--text-caption-lh);
+}
+
+@layer components {
+  .badge {
+    @apply text-emerald-800 bg-emerald-100
+  }
+
+  .btn-primary {
+    @apply bg-black text-white rounded tracking-wider hover:bg-black/90 transition-colors cursor-pointer
+  }
+
+  .btn-secondary {
+    @apply border border-black text-black tracking-wider rounded hover:bg-primary hover:text-white transition-colors cursor-pointer
+  }
+
+}
 
 @theme {
   --color-primary: var(--color-primary);

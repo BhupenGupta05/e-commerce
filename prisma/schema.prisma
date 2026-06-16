@@ -138,7 +138,7 @@ enum Category {
 
 model Product {
   id            String         @id @default(cuid())
-  imageUrl      String
+  imageUrl      String[]
   name          String         @db.VarChar(256)
   description   String
   priceInPaisa  Int

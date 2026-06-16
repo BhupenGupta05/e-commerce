@@ -20,7 +20,10 @@ const authOptions: NextAuthOptions = {
     ],
     session: {
         strategy: 'database',
+        maxAge: 30 * 24 * 60 * 60,
+        updateAge: 24 * 60 * 60 //refresh the expiry every 24h of activity
     },
+    secret: process.env.NEXTAUTH_SECRET,
     callbacks: {
         async signIn({ user, account, profile }) {
             if(!account) return false;

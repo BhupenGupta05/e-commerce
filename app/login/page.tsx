@@ -14,7 +14,7 @@ export default function LoginPage() {
     if (status === 'authenticated') {
       router.push("/discover");
     }
-  }, [status, router])
+  }, [status, router]);
 
   if (status === "loading" || status === 'authenticated') {
     return (
@@ -48,8 +48,14 @@ export default function LoginPage() {
         {/* Google Sign In Button */}
         <button
           onClick={async () => {
-            setLoading(true)
-            await signIn("google", { callbackUrl: "/discover" })
+            try {
+              setLoading(true)
+              await signIn("google", { callbackUrl: "/discover" });
+            } catch {
+              setLoading(false);
+              console.error("Unable to sign in. Please try again");
+            }
+
           }}
           disabled={loading}
           className="flex w-full items-center justify-center gap-3 rounded-lg border border-zinc-200 bg-white px-4 py-3 text-sm font-medium text-zinc-700 transition-all hover:bg-zinc-50 hover:shadow-md disabled:opacity-50"
