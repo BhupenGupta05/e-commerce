@@ -4,4 +4,5 @@ export interface Mood {
   description: string;
   image: string;
   cta?: string;
+  tag: string;
 }

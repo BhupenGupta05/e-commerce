@@ -26,7 +26,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     }`}
             >
                 <div className="flex justify-between items-center px-6 py-4 border-b border-border">
-                    <Link href="/" className="text-xl font-bold text-primary tracking-tight">
+                    <Link href="/" className="text-xl font-bold tracking-tight">
                         StoreFront
                     </Link>
                     <button

@@ -5,7 +5,17 @@ import { EVENT_TYPES } from "@/lib/events";
 import prisma from "@/lib/prisma";
 import { requireAuth } from "@/lib/session";
 
-export async function trackView(productId: string, userId: string) {
+export async function trackView(productId: string) {
+  const session = await requireAuth();
+
+  if (!session?.user?.id) {
+    return {
+      success: false,
+      error: "unauthenticated" as const
+    }
+  }
+
+  const userId = session.user.id;
   try {
     const thirtyMinutesAgo = new Date(
       Date.now() - 30 * 60 * 1000

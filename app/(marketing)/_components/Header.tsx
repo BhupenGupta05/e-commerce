@@ -13,10 +13,7 @@ export default function Header() {
     setMenuOpen(false);
   }
   return (
-    <header className="sticky
-                top-0
-                z-50
-                bg-white/80 px-6 py-6 md:px-7 md:py-7 lg:px-8 lg:py-8">
+    <header className="app-header">
       <nav
         className="flex items-center justify-between mx-auto md:h-16 lg:h-12 md:grid md:grid-cols-3 md:max-w-8xl md:items-center">
 
@@ -24,7 +21,7 @@ export default function Header() {
           <Link
             href="/"
             aria-label="Storefront home page"
-            className="text-xl font-bold tracking-tight md:text-2xl lg:text-3xl"
+            className="app-logo"
           >
             StoreFront
           </Link>
@@ -45,10 +42,10 @@ export default function Header() {
 
         <div className="flex items-center justify-end gap-4">
           <div className="hidden items-center gap-3 md:flex lg:gap-3">
-            <Link href="/login" className="text-sm hover:text-on-primary text-primary py-2 px-4 border uppercase tracking-wider rounded hover:bg-primary transition-colors cursor-pointer whitespace-nowrap lg:px-4">
+            <Link href="/login" className="btn-secondary text-sm hover:text-white text-black py-2 px-4 border uppercase whitespace-nowrap lg:px-4">
               Sign In
             </Link>
-            <Link href="/login" className="rounded px-4 py-2 text-sm hover:bg-primary/90 bg-primary border text-on-primary uppercase tracking-wider transition-colors cursor-pointer whitespace-nowrap lg:px-4">
+            <Link href="/login" className="btn-primary px-4 py-2 text-sm uppercase whitespace-nowrap lg:px-4">
               Get Started
             </Link>
           </div>

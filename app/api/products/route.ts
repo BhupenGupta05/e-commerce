@@ -1,20 +1,38 @@
 import prisma from "@/lib/prisma";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET() {
-    try {
-        const products = await prisma.product.findMany();
-        return NextResponse.json({
-            success: true,
-            data: products,
-            message: "Products fetched successfully"
-        }, { status: 200 })
-    } catch (err) {
-        console.error("Error fetching products", err);
-        return NextResponse.json({
-            success: false,
-            data: null,
-            message: "Failed to fetch products"
-        }, { status: 500 })
-    }
+const PAGE_SIZE = 24;
+
+export async function GET(req: NextRequest) {
+    const cursor = req.nextUrl.searchParams.get("cursor");
+    const mood = req.nextUrl.searchParams.get("mood");
+
+    const products = await prisma.product.findMany({
+        take: PAGE_SIZE,
+        ...(cursor && {  //If cursor product exists, add these condition
+            cursor: {
+                id: cursor,    //start from this cursor product
+            },
+            skip: 1  //Skip cursor product
+        }),
+        where: mood
+            ? {
+                tags: {
+                    has: mood,
+                },
+            }
+            : undefined,
+        orderBy: {
+            createdAt: "desc"
+        }
+    })
+
+    const nextCursor = products.length === PAGE_SIZE
+        ? products[products.length - 1].id
+        : null;
+
+    return NextResponse.json({
+        products,
+        nextCursor,
+    });
 }

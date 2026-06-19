@@ -23,7 +23,7 @@ export default function Hero() {
 
       <Link
         href="/login"
-        className="mt-10 inline-block btn-primary px-10 py-4 text-md font-medium uppercase">
+        className="mt-10 inline-block btn-primary px-8 py-3 text-md font-medium uppercase">
         Get Started
       </Link>
     </section>

@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="mt-18 px-6">
       <Link
         href="/"
-        className="text-center block text-2xl md:text-3xl font-bold tracking-tight">
+        className="text-center block app-logo">
         StoreFront
       </Link>
 
@@ -21,7 +21,7 @@ export default function Footer() {
         ))}
       </div>
 
-      <p className="mt-12 pb-4 text-xs text-center text-zinc-500 md:text-sm">
+      <p className="mt-12 pb-4 text-[10px] text-center text-zinc-500 md:text-sm">
         © 2026 StoreFront. Quietly Powerful
         Intelligence.
       </p>

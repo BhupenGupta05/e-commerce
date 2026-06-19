@@ -5,15 +5,10 @@ import authOptions from "./auth";
 import { redirect } from "next/navigation";
 
 export async function requireAuth() {
-    try {
-        const session = await getServerSession(authOptions);
+    const session = await getServerSession(authOptions);
 
-        if(!session?.user) {
-            throw new Error("unauthenticated");
-        }
-        return session;
-    } catch (err) {
-        console.error("Auth check failed", err);
+    if (!session?.user) {
         redirect("/login");
     }
+    return session;
 }

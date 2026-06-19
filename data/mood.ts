@@ -7,6 +7,7 @@ export const moods: Mood[] = [
     image: "https://picsum.photos/600/900",
     description: "For deep work",
     cta: "Explore Mood",
+    tag: "comfort"
   },
   {
     id: "2",
@@ -14,6 +15,7 @@ export const moods: Mood[] = [
     image: "https://picsum.photos/1200/600",
     description: "For deep work",
     cta: "Explore Mood",
+    tag: "adventure"
   },
   {
     id: "3",
@@ -21,6 +23,7 @@ export const moods: Mood[] = [
     image: "https://picsum.photos/800/800",
     description: "For deep work",
     cta: "Explore Mood",
+    tag: "luxury"
   },
   {
     id: "4",
@@ -28,6 +31,7 @@ export const moods: Mood[] = [
     image: "https://picsum.photos/700/1000",
     description: "For deep work",
     cta: "Explore Mood",
+    tag: "minimalist"
   },
   {
     id: "5",
@@ -35,6 +39,7 @@ export const moods: Mood[] = [
     image: "https://picsum.photos/1000/500",
     description: "For deep work",
     cta: "Explore Mood",
+    tag: "escape"
   },
   {
     id: "6",
@@ -42,5 +47,6 @@ export const moods: Mood[] = [
     image: "https://picsum.photos/900/700",
     description: "For deep work",
     cta: "Explore Mood",
+    tag: "urban"
   },
 ];

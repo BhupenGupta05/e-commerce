@@ -224,6 +224,14 @@
 }
 
 @layer components {
+  .app-header {
+    @apply sticky top-0 z-50 bg-white/80 px-6 py-6 md:px-7 md:py-7 lg:px-8 lg:py-8;
+  }
+
+  .app-logo {
+    @apply text-xl font-bold tracking-tight md:text-2xl lg:text-3xl
+  }
+
   .badge {
     @apply text-emerald-800 bg-emerald-100
   }
