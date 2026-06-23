@@ -1,8 +1,6 @@
 import { Product } from "@prisma/client";
 import ProductGallery from "./productGallery/ProductGallery";
 import ProductInfo from "./productInfo/Info";
-import ProductHeader from "./Header";
-import { BreadcrumbItemType } from "@/components/AppBreadcrumbs";
 
 interface Props {
   product: Product;
@@ -17,19 +15,8 @@ export default function ProductDetails({ product, initialSaved }: Props) {
     alt: product.name,
   }));
 
-  // const breadcrumbs: BreadcrumbItemType[] = [
-  //   { label: "Home", href: "/" },
-  //   { label: "Discover", href: "/discover" },
-  //   { label: product.name },  // bonus: use actual product name here
-  // ];
-
   return (
     <>
-      {/* <ProductHeader
-        breadcrumbs={breadcrumbs}
-        productId={product.id}
-        initialSaved={initialSaved}
-      /> */}
       <section className="pb-20 lg:pb-0">
         <div className="mx-auto max-w-8xl px-6 md:px-7 lg:px-8">
           <div
