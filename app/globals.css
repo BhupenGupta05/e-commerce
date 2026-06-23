@@ -237,11 +237,11 @@
   }
 
   .btn-primary {
-    @apply bg-black text-white rounded tracking-wider hover:bg-black/90 transition-colors cursor-pointer
+    @apply bg-black text-white rounded-md tracking-wide hover:bg-black/90 transition-colors cursor-pointer
   }
 
   .btn-secondary {
-    @apply border border-black text-black tracking-wider rounded hover:bg-primary hover:text-white transition-colors cursor-pointer
+    @apply border border-black text-black tracking-wide rounded-md hover:bg-primary hover:text-white transition-colors cursor-pointer
   }
 
 }

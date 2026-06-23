@@ -1,6 +1,6 @@
 "use client";
 
-import { menu } from "@/app/config/marketing/menu";
+import { menu } from "@/app/(marketing)/_config/menu";
 import Link from "next/link";
 import { RxCross2 } from "react-icons/rx";
 
@@ -51,11 +51,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     <hr className="border-border my-2" />
 
                     <div className="flex flex-col gap-4 mt-4 text-center">
-                        <Link href="/login" className="btn-primary py-3 px-4 text-xs uppercase">
+                        <Link href="/login" className="btn-primary py-3 px-4 text-xs caitalize">
                             Get Started
                         </Link>
-                        <Link href="/login" className="btn-secondary py-3 px-4 text-xs uppercase">
-                            Sign In
+                        <Link href="/login" className="btn-secondary py-3 px-4 text-xs caitalize">
+                            Sign in
                         </Link>
                     </div>
 

@@ -2,6 +2,7 @@ import Hero from "./_components/Hero";
 import FeaturedRelease from "./_components/FeaturedRelease";
 import KeyModules from "./_components/KeyModules";
 import Analytics from "./_components/Analytics";
+import Actions from "./_components/Actions";
 
 export default function MarketingPage() {
   return (
@@ -11,14 +12,21 @@ export default function MarketingPage() {
           <Hero />
         </div>
 
+
         <div className="md:w-[60%]">
           <FeaturedRelease />
         </div>
 
+        <div className="md:hidden flex justify-center mt-2">
+          <Actions />
+        </div>
+
+
+
       </div>
 
       <KeyModules />
-      <Analytics />
+      {/* <Analytics /> */}
     </>
   );
 }

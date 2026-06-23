@@ -1,4 +1,4 @@
-import { footer } from "@/app/config/marketing/footer";
+import { footer } from "@/app/(marketing)/_config/footer";
 import Link from "next/link";
 
 export default function Footer() {

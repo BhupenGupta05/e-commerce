@@ -6,16 +6,16 @@ import prisma from "@/lib/prisma";
 import { requireAuth } from "@/lib/session";
 
 export async function trackView(productId: string) {
-  const session = await requireAuth();
+  const user = await requireAuth();
 
-  if (!session?.user?.id) {
+  if (!user?.id) {
     return {
       success: false,
       error: "unauthenticated" as const
     }
   }
 
-  const userId = session.user.id;
+
   try {
     const thirtyMinutesAgo = new Date(
       Date.now() - 30 * 60 * 1000
@@ -23,7 +23,7 @@ export async function trackView(productId: string) {
 
     const existingView = await prisma.userEvent.findFirst({
       where: {
-        userId,
+        id: user.id,
         productId,
         eventType: EVENT_TYPES.VIEW,
         createdAt: {
@@ -40,7 +40,7 @@ export async function trackView(productId: string) {
     }
 
     await createEvent({
-      userId,
+      userId: user.id,
       productId,
       eventType: EVENT_TYPES.VIEW,
     });
@@ -53,9 +53,9 @@ export async function trackView(productId: string) {
 }
 
 export async function trackSave(productId: string) {
-  const session = await requireAuth();
+  const user = await requireAuth();
 
-  if (!session?.user?.id) {
+  if (!user?.id) {
     return {
       success: false,
       error: "unauthenticated" as const
@@ -68,7 +68,7 @@ export async function trackSave(productId: string) {
     const existingWishlistItem = await prisma.wishlistItem.findUnique({
       where: {
         userId_productId: {
-          userId: session.user.id,
+          userId: user.id,
           productId,
         },
       },
@@ -80,7 +80,7 @@ export async function trackSave(productId: string) {
         prisma.wishlistItem.delete({
           where: {
             userId_productId: {
-              userId: session.user.id,
+              userId: user.id,
               productId,
             }
 
@@ -89,7 +89,7 @@ export async function trackSave(productId: string) {
 
         prisma.userEvent.create({
           data: {
-            userId: session.user.id,
+            userId: user.id,
             productId,
             eventType: EVENT_TYPES.UNSAVE,
           },
@@ -104,14 +104,14 @@ export async function trackSave(productId: string) {
       await prisma.$transaction([
         prisma.wishlistItem.create({
           data: {
-            userId: session.user.id,
+            userId: user.id,
             productId,
           },
         }),
 
         prisma.userEvent.create({
           data: {
-            userId: session.user.id,
+            userId: user.id,
             productId,
             eventType: EVENT_TYPES.SAVE,
           },

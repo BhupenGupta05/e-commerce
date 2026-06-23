@@ -1,31 +1,41 @@
 import Link from "next/link";
+import { HiOutlineSparkles } from "react-icons/hi2";
 
 export default function Hero() {
   return (
     <section className="px-6 pt-6 text-center md:px-0 md:pt-0">
-      <div className="mx-auto inline-flex rounded-full badge px-6 py-2">
-        <span className="text-xs uppercase tracking-wide md:tracking-wider lg:text-sm">
-          Autonomous Commerce
+      <div className="mx-auto inline-flex gap-2 rounded-full badge px-4 py-2">
+        <HiOutlineSparkles />
+        <span className="text-xs">
+          Curated daily by AI
         </span>
       </div>
 
-      <h1 className="mt-8 text-5xl font-bold tracking-tight lg:text-6xl">
-        Intelligence,
+      <h1 className="mt-8 text-4xl font-bold tracking-tight lg:text-5xl">
+        Your taste,
         <br />
-        Curated.
+        finally understood.
       </h1>
 
-      <p className="mx-auto mt-6 max-w-md text-xl leading-relaxed text-zinc-600 md:mx-0 md:max-w-full">
-        The next evolution of commerce -
-        where quiet intelligence meets
-        meticulous design.
+      <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-zinc-600 md:mx-0 md:max-w-full wrap-break-word">
+        Shop a feed that learns what you love and gets better every day.
       </p>
 
-      <Link
-        href="/login"
-        className="mt-10 inline-block btn-primary px-8 py-3 text-md font-medium uppercase">
-        Get Started
-      </Link>
+      <div className="hidden md:flex justify-between items-center gap-4 md:mt-8">
+        <Link
+          href="/login"
+          className="flex btn-primary px-9 py-3 text-sm capitalize font-medium text-wrap">
+          Explore your picks
+        </Link>
+
+        <Link
+          href="/login"
+          className="flex btn-secondary px-9 py-3 text-sm capitalize font-medium text-wrap">
+          See how it works
+        </Link>
+      </div>
+
     </section>
   );
 }
+

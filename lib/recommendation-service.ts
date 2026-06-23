@@ -1,10 +1,11 @@
 import { Category, Product } from "@prisma/client";
 import { EVENT_TYPES, EVENT_WEIGHTS } from "./events";
 import prisma from "./prisma";
-import { requireAuth } from "./session";
+import { getServerSession } from "next-auth";
+import authOptions from "./auth";
 
 export async function getRecommendations(): Promise<Product[]> {
-    const session = await requireAuth();
+    const session = await getServerSession(authOptions);
 
     if (!session?.user?.id) {
         return [];
@@ -20,8 +21,17 @@ export async function getRecommendations(): Promise<Product[]> {
                     in: [EVENT_TYPES.VIEW, EVENT_TYPES.SAVE],
                 },
             },
+            orderBy: {
+                createdAt: "desc",
+            },
+            take: 200,
             include: {
-                product: true
+                product: {
+                    select: {
+                        id: true,
+                        category: true,
+                    }
+                }
             },
         }),
         prisma.wishlistItem.findMany({
@@ -53,7 +63,7 @@ export async function getRecommendations(): Promise<Product[]> {
     );
 
     for (const event of events) {
-        seenProductIDs.add(event.productId);
+        // seenProductIDs.add(event.productId);
 
         const category = event.product.category;
 
@@ -67,9 +77,9 @@ export async function getRecommendations(): Promise<Product[]> {
     const topCategories = [...categoryScores.entries()]
         .sort((a, b) => b[1] - a[1])
         .map(([category]) => category);
+    
 
-
-    return prisma.product.findMany({
+    const recommendations = await prisma.product.findMany({
         where: {
             isActive: true,
             category: {
@@ -81,5 +91,7 @@ export async function getRecommendations(): Promise<Product[]> {
         },
         take: 12,
     });
+
+    return recommendations;
 
 }

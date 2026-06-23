@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function FeaturedRelease() {
   return (
-    <section className="mt-10 px-6 md:mt-0 md:px-0">
+    <section className="mt-2 px-6 md:mt-0 md:px-0">
       <div className="relative overflow-hidden rounded-lg mx-auto">
         <Image
           src="/Tote.png"
