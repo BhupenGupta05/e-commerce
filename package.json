@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS='--max-old-space-size=3072 --expose-gc' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -22,7 +22,6 @@
     "clsx": "^2.1.1",
     "dotenv": "^17.4.2",
     "lucide-react": "^1.18.0",
-    "next": "16.2.7",
     "next-auth": "^4.24.14",
     "pg": "^8.21.0",
     "prisma": "^5.22.0",

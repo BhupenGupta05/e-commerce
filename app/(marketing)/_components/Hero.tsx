@@ -23,7 +23,7 @@ export default function Hero() {
 
       <div className="hidden md:flex justify-between items-center gap-4 md:mt-8">
         <Link
-          href="/login"
+          href="/discover"
           className="flex btn-primary px-9 py-3 text-sm capitalize font-medium text-wrap">
           Explore your picks
         </Link>

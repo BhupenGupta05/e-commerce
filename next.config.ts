@@ -1,4 +1,3 @@
-// next.config.ts
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -26,6 +25,7 @@ const nextConfig: NextConfig = {
     contentDispositionType: 'attachment',  // Required for security when allowing SVGs
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",  // Additional security
   },
+  turbopack: {},
 };
 
 export default nextConfig;

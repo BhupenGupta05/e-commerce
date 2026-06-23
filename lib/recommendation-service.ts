@@ -24,7 +24,7 @@ export async function getRecommendations(): Promise<Product[]> {
             orderBy: {
                 createdAt: "desc",
             },
-            take: 200,
+            take: 10,
             include: {
                 product: {
                     select: {

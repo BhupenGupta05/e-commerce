@@ -23,7 +23,7 @@ export async function trackView(productId: string) {
 
     const existingView = await prisma.userEvent.findFirst({
       where: {
-        id: user.id,
+        userId: user.id,
         productId,
         eventType: EVENT_TYPES.VIEW,
         createdAt: {
