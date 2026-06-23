@@ -1,13 +1,13 @@
 import { PiExport, PiUserCircle } from "react-icons/pi";
-import { menu } from "@/app/(protected)/discover/_config/menu";
 import Link from "next/link";
 import AppBreadcrumbs from "@/components/AppBreadcrumbs";
-import WishlistButton from "@/app/(protected)/discover/_components/WishlistButton";
 import { getServerSession } from "next-auth";
 import authOptions from "@/lib/auth";
 import prisma from "@/lib/prisma";
 import { EVENT_TYPES } from "@/lib/events";
 import BackButton from "../../_components/BackButton";
+import { menu } from "../../_config/menu";
+import WishlistButton from "../../_components/WishlistButton";
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
