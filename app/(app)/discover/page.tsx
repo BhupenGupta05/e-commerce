@@ -29,13 +29,13 @@ export default async function Page({ searchParams }: {
         )
     }
 
-    // if (state === "ONBOARDING") {
-    //     return (
-    //         <main className="space-y-10 p-1 md:p-8">
-    //             <Onboarding />
-    //         </main>
-    //     )
-    // }
+    if (state === "ONBOARDING") {
+        return (
+            <main className="space-y-10 p-1 md:p-8">
+                <Onboarding />
+            </main>
+        )
+    }
 
     const [recommendedProducts, allProducts] = await Promise.all([
         isViewAll ? Promise.resolve([]) : getRecommendations(),

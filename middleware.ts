@@ -6,7 +6,6 @@ const ANONYMOUS_ALLOWED = ["/discover"];
 const PUBLIC = ["/", "/login"];
 
 export async function middleware(req: NextRequest) {
-    console.log("MIDDLEWARE HIT:", req.nextUrl.pathname); // add this
     const { pathname } = req.nextUrl;
 
     // Always allow public routes

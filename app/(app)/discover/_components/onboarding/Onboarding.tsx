@@ -1,3 +1,5 @@
+import { savePreferences, skipOnboarding } from "@/app/actions/onboarding";
+
 type Option = {
   id: string;
   label: string;
@@ -28,22 +30,30 @@ const budgets: Option[] = [
   { id: "50k+", label: "₹50k+" },
 ];
 
-function Chip({ children }: { children: React.ReactNode }) {
+function Chip({ name, value, children }:
+  { name: string; value: string; children: React.ReactNode }
+) {
   return (
-    <button
-      type="button"
-      className="
-  rounded-full
-  border
-  cursor-pointer
-  border-zinc-300
-  px-[clamp(0.75rem,2vw,1rem)]
-  py-[clamp(0.4rem,1vw,0.6rem)]
-  text-[clamp(0.75rem,1.2vw,0.875rem)]
-"
-    >
-      {children}
-    </button>
+    <label className="cursor-pointer">
+      <input type="checkbox" name={name} value={value} className="hidden peer" />
+      <span className="peer-checked:bg-black peer-checked:text-white peer-checked:border-black rounded-full border border-zinc-300 px-4 py-2 text-sm block">
+        {children}
+      </span>
+    </label>
+    //     <button
+    //       type="button"
+    //       className="
+    //   rounded-full
+    //   border
+    //   cursor-pointer
+    //   border-zinc-300
+    //   px-[clamp(0.75rem,2vw,1rem)]
+    //   py-[clamp(0.4rem,1vw,0.6rem)]
+    //   text-[clamp(0.75rem,1.2vw,0.875rem)]
+    // "
+    //     >
+    //       {children}
+    //     </button>
   );
 }
 
@@ -82,7 +92,9 @@ export default function Page() {
     <div className="grid grid-cols-1 lg:grid-cols-2">
       {/* LEFT: FORM */}
       <div className="flex justify-start px-6 md:px-0 py-4">
-        <form className="flex w-full max-w-2xl flex-col gap-[clamp(1.25rem,3vw,2rem)]">
+        <form
+          action={savePreferences}
+          className="flex w-full max-w-2xl flex-col gap-[clamp(1.25rem,3vw,2rem)]">
           <header className="space-y-2">
             <h1
               className="
@@ -109,7 +121,7 @@ export default function Page() {
             </legend>
             <div className="flex flex-wrap gap-2">
               {shoppingCategories.map((c) => (
-                <Chip key={c.id}>{c.label}</Chip>
+                <Chip name="categories" value={c.id} key={c.id}>{c.label}</Chip>
               ))}
             </div>
           </fieldset>
@@ -120,7 +132,7 @@ export default function Page() {
             </legend>
             <div className="flex flex-wrap gap-2">
               {styleVibes.map((s) => (
-                <Chip key={s.id}>{s.label}</Chip>
+                <Chip name="vibes" value={s.id} key={s.id}>{s.label}</Chip>
               ))}
             </div>
           </fieldset>
@@ -131,7 +143,7 @@ export default function Page() {
             </legend>
             <div className="flex flex-wrap gap-2">
               {budgets.map((b) => (
-                <Chip key={b.id}>{b.label}</Chip>
+                <Chip name="budget" value={b.id} key={b.id}>{b.label}</Chip>
               ))}
             </div>
           </fieldset>
@@ -155,7 +167,8 @@ text-[clamp(0.875rem,1.2vw,1rem)]
             </button>
 
             <button
-              type="button"
+              type="submit"
+              formAction={skipOnboarding}
               className="
                 rounded-xl
                 border
