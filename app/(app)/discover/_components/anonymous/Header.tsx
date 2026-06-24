@@ -16,7 +16,7 @@ export default function Header() {
 
                     {/* Heading with line break on all screens */}
                     <h1 className="mt-3 max-w-2xl text-3xl tracking-tight font-semibold md:text-5xl lg:text-6xl">
-                        What everyone's
+                        What everyone&apos;s
                         <br />
                         loving right now.
                     </h1>
@@ -29,9 +29,9 @@ export default function Header() {
 
                 {/* FILTERS */}
                 <div className="mt-6">
-                     <TopCategories />
+                    <TopCategories />
                 </div>
-               
+
             </div>
         </section>
     );

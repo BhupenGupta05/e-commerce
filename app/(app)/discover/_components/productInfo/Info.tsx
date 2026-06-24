@@ -1,11 +1,5 @@
 import { Product } from "@prisma/client";
 import MatchBadge from "./MatchBadge";
-import ProductName from "./Name";
-import ProductRating from "./Rating";
-import ProductDescription from "./Description";
-import ProductPrice from "./Price";
-import ProductTags from "./Tags";
-import ProductActions from "./Actions";
 import Name from "./Name";
 import Rating from "./Rating";
 import Description from "./Description";

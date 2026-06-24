@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Product } from "@prisma/client";
 import ProductCarousel from "./ProductCarousel";
@@ -36,7 +36,7 @@ export default function RecommendationSection({
 
   const handleNext = useCallback(() => {
     setPage((prev) => Math.min(prev + 1, totalPages - 1))
-  }, []);
+  }, [totalPages]);
 
   const safePage = Math.min(page, Math.max(totalPages - 1, 0));
 

@@ -33,7 +33,7 @@ export default function DiscoverHeader() {
 
           <div className="mt-1 flex items-end justify-between gap-4">
             <h1 className="text-[clamp(1.875rem,1.25rem+2vw,3rem)] font-semibold tracking-tight leading-[1.05]">
-              Here's what's new
+              Here&apos;s what&apos;s new
               <br className="sm:hidden" />
               {" "}for you
             </h1>

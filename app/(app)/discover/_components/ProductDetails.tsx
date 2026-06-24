@@ -8,7 +8,7 @@ interface Props {
 }
 
 
-export default function ProductDetails({ product, initialSaved }: Props) {
+export default function ProductDetails({ product }: Props) {
   const images = product.imageUrl.map((url, idx) => ({
     id: String(idx),
     url,
