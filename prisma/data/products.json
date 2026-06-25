@@ -1,0 +1,537 @@
+[
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356094/products/book1/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356096/products/book1/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356098/products/book1/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356100/products/book1/screen.png"
+    ],
+    "name": "Atomic Habits – James Clear",
+    "description": "A proven framework for improving every day. James Clear reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.",
+    "priceInPaisa": 49900,
+    "stock": 120,
+    "tags": ["book", "self-help", "habits", "productivity", "bestseller"],
+    "isActive": true,
+    "category": "books"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356101/products/book2/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356103/products/book2/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356106/products/book2/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356108/products/book2/screen.png"
+    ],
+    "name": "The Psychology of Money – Morgan Housel",
+    "description": "Timeless lessons on wealth, greed, and happiness. Morgan Housel shares 19 short stories exploring the strange ways people think about money and teaches you how to make better sense of one of life's most important topics.",
+    "priceInPaisa": 44900,
+    "stock": 95,
+    "tags": ["book", "finance", "money", "investing", "psychology"],
+    "isActive": true,
+    "category": "books"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356109/products/book3/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356111/products/book3/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356113/products/book3/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356122/products/book3/screen.png"
+    ],
+    "name": "Deep Work – Cal Newport",
+    "description": "Rules for focused success in a distracted world. Cal Newport argues that the ability to perform deep work is becoming increasingly rare and valuable, and teaches you how to cultivate this skill to achieve extraordinary results.",
+    "priceInPaisa": 42900,
+    "stock": 80,
+    "tags": ["book", "productivity", "focus", "career", "self-improvement"],
+    "isActive": true,
+    "category": "books"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356127/products/book4/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356129/products/book4/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356131/products/book4/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356132/products/book4/screen.png"
+    ],
+    "name": "Ikigai – Héctor García & Francesc Miralles",
+    "description": "The Japanese secret to a long and happy life. This book explores the concept of ikigai, the reason for being, and reveals the habits of Japan's longest-lived people through captivating personal interviews and philosophy.",
+    "priceInPaisa": 39900,
+    "stock": 110,
+    "tags": ["book", "lifestyle", "japanese", "wellness", "philosophy"],
+    "isActive": true,
+    "category": "books"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356136/products/cargo-pants/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356140/products/cargo-pants/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356143/products/cargo-pants/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356145/products/cargo-pants/screen.png"
+    ],
+    "name": "Urban Cargo Pants",
+    "description": "Versatile cargo pants built for everyday wear with multiple utility pockets. Made from durable cotton-blend fabric with a relaxed fit, perfect for casual outings, travel, or outdoor activities.",
+    "priceInPaisa": 179900,
+    "stock": 60,
+    "tags": ["pants", "cargo", "men", "casual", "streetwear"],
+    "isActive": true,
+    "category": "clothing"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356147/products/desk-organizer/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356149/products/desk-organizer/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356150/products/desk-organizer/screen.png"
+    ],
+    "name": "Bamboo Desk Organizer",
+    "description": "Elegant multi-compartment desk organizer crafted from sustainable bamboo. Features dedicated slots for pens, phone, notebooks, and accessories to keep your workspace clean and productive.",
+    "priceInPaisa": 129900,
+    "stock": 45,
+    "tags": ["desk", "organizer", "bamboo", "office", "stationery"],
+    "isActive": true,
+    "category": "furniture"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356151/products/earbuds/screen_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356154/products/earbuds/screen_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356155/products/earbuds/screen.png"
+    ],
+    "name": "ProBass TWS Earbuds",
+    "description": "True wireless earbuds with active noise cancellation and 30-hour total battery life. Equipped with 10mm drivers for deep bass, IPX5 water resistance, and a seamless Bluetooth 5.3 connection.",
+    "priceInPaisa": 299900,
+    "stock": 75,
+    "tags": ["earbuds", "tws", "bluetooth", "anc", "audio"],
+    "isActive": true,
+    "category": "electronics"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356156/products/facewash/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356159/products/facewash/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356164/products/facewash/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356166/products/facewash/screen.png"
+    ],
+    "name": "Vitamin C Brightening Face Wash",
+    "description": "A gentle yet effective face wash enriched with Vitamin C and niacinamide to brighten skin tone and remove impurities. Suitable for all skin types, dermatologist-tested, and free from parabens and sulfates.",
+    "priceInPaisa": 34900,
+    "stock": 150,
+    "tags": ["facewash", "skincare", "vitamin-c", "brightening", "beauty"],
+    "isActive": true,
+    "category": "beauty"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356167/products/gaming-mouse/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356169/products/gaming-mouse/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356171/products/gaming-mouse/screen.png"
+    ],
+    "name": "HyperX Pro Gaming Mouse",
+    "description": "High-precision gaming mouse with a 16000 DPI optical sensor and customizable RGB lighting. Features 6 programmable buttons, an ergonomic right-handed design, and a braided cable for durability.",
+    "priceInPaisa": 249900,
+    "stock": 40,
+    "tags": ["mouse", "gaming", "rgb", "pc", "accessories"],
+    "isActive": true,
+    "category": "electronics"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356174/products/graphic%20t-shirt/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356178/products/graphic%20t-shirt/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356181/products/graphic%20t-shirt/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356189/products/graphic%20t-shirt/screen.png"
+    ],
+    "name": "Oversized Graphic T-Shirt",
+    "description": "Premium 100% cotton oversized tee with a bold graphic print. Pre-shrunk fabric ensures a consistent fit wash after wash, making it a staple for casual streetwear looks.",
+    "priceInPaisa": 89900,
+    "stock": 100,
+    "tags": ["t-shirt", "graphic", "oversized", "streetwear", "men"],
+    "isActive": true,
+    "category": "clothing"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356203/products/headphones/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356205/products/headphones/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356207/products/headphones/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356218/products/headphones/screen.png"
+    ],
+    "name": "Studio Pro Over-Ear Headphones",
+    "description": "Premium over-ear headphones with hybrid active noise cancellation and Hi-Res audio certification. Delivers up to 40 hours of playback, foldable design for portability, and a built-in mic for crystal-clear calls.",
+    "priceInPaisa": 599900,
+    "stock": 30,
+    "tags": ["headphones", "anc", "wireless", "audio", "music"],
+    "isActive": true,
+    "category": "electronics"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356221/products/hoodie/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356222/products/hoodie/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356226/products/hoodie/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356229/products/hoodie/screen.png"
+    ],
+    "name": "Essential Fleece Hoodie",
+    "description": "Ultra-soft fleece hoodie with a kangaroo pocket and adjustable drawstring hood. Made from a heavyweight 380gsm cotton-polyester blend for warmth and comfort during cooler months.",
+    "priceInPaisa": 199900,
+    "stock": 85,
+    "tags": ["hoodie", "fleece", "winter", "casual", "unisex"],
+    "isActive": true,
+    "category": "clothing"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356231/products/jeans/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356233/products/jeans/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356239/products/jeans/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356241/products/jeans/screen.png"
+    ],
+    "name": "Slim Fit Stretch Jeans",
+    "description": "Modern slim-fit jeans made with 2% elastane for all-day comfort and flexibility. Classic 5-pocket design with a mid-rise waist, available in a versatile dark wash that pairs with everything.",
+    "priceInPaisa": 219900,
+    "stock": 70,
+    "tags": ["jeans", "denim", "slim-fit", "men", "casual"],
+    "isActive": true,
+    "category": "clothing"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356245/products/joggers/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356247/products/joggers/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356253/products/joggers/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356260/products/joggers/screen.png"
+    ],
+    "name": "DryFit Tapered Joggers",
+    "description": "Lightweight tapered joggers with moisture-wicking DryFit fabric for workouts or casual wear. Features an elastic waistband with drawstring, zippered pockets, and ribbed ankle cuffs.",
+    "priceInPaisa": 149900,
+    "stock": 90,
+    "tags": ["joggers", "sportswear", "gym", "running", "men"],
+    "isActive": true,
+    "category": "clothing"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356263/products/keyboard/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356265/products/keyboard/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356273/products/keyboard/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356279/products/keyboard/screen.png"
+    ],
+    "name": "Mechanical RGB Gaming Keyboard",
+    "description": "Tenkeyless mechanical keyboard with tactile blue switches and full per-key RGB lighting. Built with an aluminum top plate for durability, N-key rollover, and a detachable USB-C cable.",
+    "priceInPaisa": 449900,
+    "stock": 35,
+    "tags": ["keyboard", "mechanical", "rgb", "gaming", "pc"],
+    "isActive": true,
+    "category": "electronics"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356288/products/kurta/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356290/products/kurta/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356293/products/kurta/screen.png"
+    ],
+    "name": "Cotton Straight Kurta",
+    "description": "Handcrafted straight-cut kurta in pure breathable cotton, perfect for festive occasions and daily wear. Features subtle embroidery detailing at the collar and cuffs, available in multiple traditional colors.",
+    "priceInPaisa": 159900,
+    "stock": 65,
+    "tags": ["kurta", "ethnic", "cotton", "indian", "men"],
+    "isActive": true,
+    "category": "clothing"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356294/products/led-lamp/screen_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356296/products/led-lamp/screen_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356302/products/led-lamp/screen_4.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356312/products/led-lamp/screen.png"
+    ],
+    "name": "Smart LED Desk Lamp",
+    "description": "Touch-controlled LED desk lamp with 5 color temperature modes and 10 brightness levels. Features USB-A and USB-C charging ports, auto-dimming, and a sleek 360° adjustable arm for optimal lighting.",
+    "priceInPaisa": 189900,
+    "stock": 50,
+    "tags": ["lamp", "led", "desk", "smart", "office"],
+    "isActive": true,
+    "category": "electronics"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356313/products/moisturizer/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356314/products/moisturizer/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356317/products/moisturizer/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356319/products/moisturizer/screen.png"
+    ],
+    "name": "Hyaluronic Acid Daily Moisturizer",
+    "description": "Lightweight gel-cream moisturizer with hyaluronic acid and ceramides for 72-hour hydration. Non-comedogenic, fragrance-free formula absorbs instantly without any greasy residue, suitable for oily and combination skin.",
+    "priceInPaisa": 54900,
+    "stock": 130,
+    "tags": ["moisturizer", "skincare", "hyaluronic-acid", "hydration", "beauty"],
+    "isActive": true,
+    "category": "beauty"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356326/products/monitor-light/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356332/products/monitor-light/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356336/products/monitor-light/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356340/products/monitor-light/screen.png"
+    ],
+    "name": "Monitor Screen Light Bar",
+    "description": "Asymmetric optical design screen light bar that illuminates your desk without screen glare. Offers stepless dimming, dual color temperature control, and attaches magnetically to any monitor without cables clutter.",
+    "priceInPaisa": 249900,
+    "stock": 40,
+    "tags": ["monitor-light", "desk", "led", "office", "setup"],
+    "isActive": true,
+    "category": "electronics"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356349/products/notebook-set/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356358/products/notebook-set/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356360/products/notebook-set/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356370/products/notebook-set/screen.png"
+    ],
+    "name": "Premium Hardcover Notebook Set (3-pack)",
+    "description": "Set of 3 A5 hardcover notebooks with 200 pages each of 100gsm ivory dot-grid paper. Lay-flat binding, ribbon bookmark, and elastic closure make these ideal for journaling, note-taking, or sketching.",
+    "priceInPaisa": 79900,
+    "stock": 88,
+    "tags": ["notebook", "stationery", "journal", "writing", "set"],
+    "isActive": true,
+    "category": "other"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356381/products/polo%20t-shirt/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356383/products/polo%20t-shirt/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356394/products/polo%20t-shirt/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356398/products/polo%20t-shirt/screen.png"
+    ],
+    "name": "Classic Pique Polo T-Shirt",
+    "description": "Timeless polo shirt made from premium pique cotton with a soft hand feel and structured collar. Features a 3-button placket and a slightly relaxed fit for smart-casual versatility.",
+    "priceInPaisa": 119900,
+    "stock": 95,
+    "tags": ["polo", "t-shirt", "men", "smart-casual", "cotton"],
+    "isActive": true,
+    "category": "clothing"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356400/products/rain-jacket/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356403/products/rain-jacket/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356404/products/rain-jacket/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356412/products/rain-jacket/screen.png"
+    ],
+    "name": "Waterproof Rain Jacket",
+    "description": "Packable waterproof rain jacket with taped seams and a DWR-coated shell to keep you dry in heavy downpours. Folds into its own pocket for easy storage, with adjustable hood, cuffs, and hem.",
+    "priceInPaisa": 349900,
+    "stock": 42,
+    "tags": ["jacket", "rain", "waterproof", "outdoor", "travel"],
+    "isActive": true,
+    "category": "clothing"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356417/products/serum/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356424/products/serum/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356432/products/serum/screen.png"
+    ],
+    "name": "10% Niacinamide Brightening Serum",
+    "description": "Concentrated serum with 10% niacinamide and 1% zinc to visibly reduce pores, control sebum, and even skin tone. Lightweight, water-based formula that layers effortlessly under moisturizer and sunscreen.",
+    "priceInPaisa": 64900,
+    "stock": 140,
+    "tags": ["serum", "niacinamide", "skincare", "brightening", "beauty"],
+    "isActive": true,
+    "category": "beauty"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356435/products/shampoo/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356438/products/shampoo/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356441/products/shampoo/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356448/products/shampoo/screen.png"
+    ],
+    "name": "Keratin Repair Shampoo",
+    "description": "Sulfate-free keratin-infused shampoo that repairs damaged, frizzy hair from the first wash. Enriched with argan oil and biotin to strengthen strands, add shine, and promote healthy scalp balance.",
+    "priceInPaisa": 44900,
+    "stock": 120,
+    "tags": ["shampoo", "hair-care", "keratin", "sulfate-free", "beauty"],
+    "isActive": true,
+    "category": "beauty"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356453/products/shirt/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356456/products/shirt/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356460/products/shirt/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356461/products/shirt/screen.png"
+    ],
+    "name": "Oxford Button-Down Shirt",
+    "description": "Classic Oxford weave shirt with a button-down collar and a tailored slim fit. Crafted from 100% breathable cotton that keeps you comfortable from the office to evening outings.",
+    "priceInPaisa": 169900,
+    "stock": 75,
+    "tags": ["shirt", "oxford", "formal", "men", "cotton"],
+    "isActive": true,
+    "category": "clothing"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356474/products/shorts/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356481/products/shorts/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356493/products/shorts/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356497/products/shorts/screen.png"
+    ],
+    "name": "7-Inch Running Shorts",
+    "description": "Lightweight 7-inch running shorts with built-in liner and reflective accents for visibility. Quick-dry fabric with a 4-way stretch ensures unrestricted movement during runs, gym sessions, or outdoor activities.",
+    "priceInPaisa": 99900,
+    "stock": 80,
+    "tags": ["shorts", "running", "gym", "sportswear", "men"],
+    "isActive": true,
+    "category": "clothing"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356499/products/smart-watch/screen_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356501/products/smart-watch/screen_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356504/products/smart-watch/screen_4.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356512/products/smart-watch/screen.png"
+    ],
+    "name": "FitPro Smart Watch",
+    "description": "Feature-rich smartwatch with a 1.96-inch AMOLED display, 100+ sport modes, and advanced health tracking including SpO2, heart rate, and sleep analysis. 7-day battery life with Bluetooth calling support.",
+    "priceInPaisa": 499900,
+    "stock": 55,
+    "tags": ["smartwatch", "fitness", "wearable", "health", "electronics"],
+    "isActive": true,
+    "category": "electronics"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356515/products/speakers/screen_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356516/products/speakers/screen_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356530/products/speakers/screen_4.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356539/products/speakers/screen.png"
+    ],
+    "name": "360° Portable Bluetooth Speaker",
+    "description": "Compact 360° omnidirectional Bluetooth speaker with 20W output and deep bass radiator. IPX7 waterproof rating, 24-hour battery life, and built-in mic for hands-free calls make it perfect for outdoor adventures.",
+    "priceInPaisa": 349900,
+    "stock": 48,
+    "tags": ["speaker", "bluetooth", "portable", "waterproof", "audio"],
+    "isActive": true,
+    "category": "electronics"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356543/products/ssd/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356545/products/ssd/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356549/products/ssd/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356552/products/ssd/screen.png"
+    ],
+    "name": "1TB NVMe M.2 SSD",
+    "description": "High-performance NVMe M.2 SSD with sequential read speeds up to 7400 MB/s. Ideal for gaming, content creation, and OS installations, with a 5-year warranty and dynamic thermal protection.",
+    "priceInPaisa": 799900,
+    "stock": 38,
+    "tags": ["ssd", "storage", "nvme", "pc", "electronics"],
+    "isActive": true,
+    "category": "electronics"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356554/products/sunscreen/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356557/products/sunscreen/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356558/products/sunscreen/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356567/products/sunscreen/screen.png"
+    ],
+    "name": "SPF 50 PA++++ Sunscreen",
+    "description": "Broad-spectrum SPF 50 PA++++ sunscreen with a lightweight, invisible finish that leaves no white cast. Formulated with antioxidants and skin-soothing ingredients for daily UV protection on all skin tones.",
+    "priceInPaisa": 49900,
+    "stock": 160,
+    "tags": ["sunscreen", "spf50", "skincare", "uv-protection", "beauty"],
+    "isActive": true,
+    "category": "beauty"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356574/products/sweater/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356576/products/sweater/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356577/products/sweater/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356580/products/sweater/screen.png"
+    ],
+    "name": "Merino Wool Crew Neck Sweater",
+    "description": "Luxuriously soft crew neck sweater knitted from 100% superfine merino wool. Naturally temperature-regulating, odor-resistant, and machine washable — the perfect layer for any season.",
+    "priceInPaisa": 299900,
+    "stock": 55,
+    "tags": ["sweater", "merino", "wool", "winter", "men"],
+    "isActive": true,
+    "category": "clothing"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356581/products/travel-backpack/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356590/products/travel-backpack/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356601/products/travel-backpack/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356605/products/travel-backpack/screen.png"
+    ],
+    "name": "40L Travel Backpack",
+    "description": "Carry-on compatible 40L travel backpack with a clamshell opening for easy packing and a dedicated TSA-friendly laptop compartment. Made from water-resistant 900D polyester with comfortable padded straps.",
+    "priceInPaisa": 399900,
+    "stock": 32,
+    "tags": ["backpack", "travel", "laptop", "carry-on", "outdoor"],
+    "isActive": true,
+    "category": "other"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356609/products/usb-c/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356610/products/usb-c/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356619/products/usb-c/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356625/products/usb-c/screen.png"
+    ],
+    "name": "100W USB-C GaN Charger",
+    "description": "Compact 100W GaN USB-C charger with 4 ports (2x USB-C, 2x USB-A) for charging laptops, phones, and tablets simultaneously. Intelligent power distribution ensures every device charges at optimal speed.",
+    "priceInPaisa": 199900,
+    "stock": 66,
+    "tags": ["charger", "usb-c", "gan", "100w", "electronics"],
+    "isActive": true,
+    "category": "electronics"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356632/products/water-bottle/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356634/products/water-bottle/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356636/products/water-bottle/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356643/products/water-bottle/screen.png"
+    ],
+    "name": "Insulated Stainless Steel Water Bottle",
+    "description": "Double-wall vacuum-insulated 1L water bottle that keeps drinks cold for 24 hours and hot for 12. Food-grade 18/8 stainless steel construction with a leak-proof lid and a wide mouth for ice cubes.",
+    "priceInPaisa": 129900,
+    "stock": 100,
+    "tags": ["water-bottle", "insulated", "stainless-steel", "gym", "eco"],
+    "isActive": true,
+    "category": "other"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356646/products/webcam/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356648/products/webcam/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356654/products/webcam/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356662/products/webcam/screen.png"
+    ],
+    "name": "4K Ultra HD Webcam",
+    "description": "Professional 4K webcam with Sony sensor, auto-focus, and built-in dual noise-cancelling microphones. Wide 90° field of view, HDR support, and plug-and-play USB-C compatibility for seamless video calls.",
+    "priceInPaisa": 549900,
+    "stock": 28,
+    "tags": ["webcam", "4k", "streaming", "work-from-home", "electronics"],
+    "isActive": true,
+    "category": "electronics"
+  },
+  {
+    "imageUrl": [
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356666/products/yoga-mat/screen_copy_2.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356671/products/yoga-mat/screen_copy_3.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356674/products/yoga-mat/screen_copy.png",
+      "https://res.cloudinary.com/dazmfttvo/image/upload/v1782356682/products/yoga-mat/screen.png"
+    ],
+    "name": "6mm Non-Slip Yoga Mat",
+    "description": "Premium 6mm thick yoga mat with double-sided non-slip texture for superior grip on any surface. Made from eco-friendly TPE material that is sweat-resistant, easy to clean, and includes a carrying strap.",
+    "priceInPaisa": 149900,
+    "stock": 72,
+    "tags": ["yoga-mat", "fitness", "gym", "exercise", "eco"],
+    "isActive": true,
+    "category": "other"
+  }
+]
