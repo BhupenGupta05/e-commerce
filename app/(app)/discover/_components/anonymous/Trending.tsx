@@ -3,6 +3,7 @@
 import { Product } from "@prisma/client";
 import Link from "next/link";
 import ProductCard from "../ProductCard";
+import { DISCOVER_SOURCE, discoverUrl } from "@/lib/routes/discover";
 
 interface Props {
   products: Product[];
@@ -20,7 +21,7 @@ export default function Trending({
           {title}
         </p>
         <Link
-          href="/discover?source=trending"
+          href={discoverUrl({ source: DISCOVER_SOURCE.TRENDING })}
           className="flex h-8 px-3 lg:h-10 lg:px-4 items-center justify-center rounded-xl border border-gray-300 text-xs lg:text-sm font-medium hover:bg-gray-50 transition-colors"
         >
           View all

@@ -1,5 +1,6 @@
 "use client";
 
+import { DISCOVER_SOURCE, discoverUrl } from "@/lib/routes/discover";
 import Link from "next/link";
 import { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
@@ -58,7 +59,7 @@ export default function AssistantInsight({ insight }: { insight: string }) {
       </h2>
 
       <Link
-        href="/discover?source=assistant"
+        href={discoverUrl({ source: DISCOVER_SOURCE.ASSISTANT })}
         className="
     mt-6
     inline-block

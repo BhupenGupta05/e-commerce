@@ -6,6 +6,7 @@ import { Product } from "@prisma/client";
 import ProductCarousel from "./ProductCarousel";
 import { useItemsPerView } from "../_hooks/useItemPerView";
 import Link from "next/link";
+import { DISCOVER_SOURCE, discoverUrl } from "@/lib/routes/discover";
 
 const CAROUSEL_LIMIT = 12;
 
@@ -88,18 +89,18 @@ export default function RecommendationSection({
             />
           </button>
 
-           {showViewAll && (
-          <Link
-            href="/discover?source=recommended"
-            className={`flex h-8 px-3 
+          {showViewAll && (
+            <Link
+              href={discoverUrl({ source: DISCOVER_SOURCE.RECOMMENDED })}
+              className={`flex h-8 px-3 
                   lg:h-10 lg:px-4 items-center 
                   justify-center rounded-xl border 
                   border-gray-300 text-xs lg:text-sm 
                   font-medium hover:bg-gray-50 
                   transition-colors ${atEnd ? '' : 'invisible'}`}
-          >
-            View all
-          </Link>
+            >
+              View all
+            </Link>
           )}
 
         </div>

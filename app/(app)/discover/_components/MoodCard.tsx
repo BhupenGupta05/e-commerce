@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Mood } from "@/types/mood";
 import Link from "next/link";
+import { discoverUrl } from "@/lib/routes/discover";
 
 interface Props {
   mood: Mood;
@@ -19,7 +20,7 @@ export default function MoodCard({
     cursor-pointer blur-xl"
     >
       <Link
-        href={`/discover?mood=${mood.tag}`}>
+        href={discoverUrl({ mood: mood.tag })}>
         <Image
           src={mood.image}
           alt={mood.title}

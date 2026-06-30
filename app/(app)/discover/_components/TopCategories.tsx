@@ -1,5 +1,6 @@
 "use client";
 
+import { discoverUrl, parseDiscoverParams } from "@/lib/routes/discover";
 import { useRouter, useSearchParams } from "next/navigation"
 
 const categories = [
@@ -12,19 +13,11 @@ const categories = [
 export default function TopCategories() {
     const router = useRouter();
     const searchParams = useSearchParams();
-
+    const current = parseDiscoverParams(searchParams);
     const selectedCategory = searchParams.get("category") ?? "All";
 
     const handleCategoryClick = (category: string) => {
-        const params = new URLSearchParams(searchParams);
-
-        if (category === "All") {
-            params.delete("category");
-        } else {
-            params.set("category", category);
-        }
-
-        router.push(`/discover?${params.toString()}`);
+        router.push(discoverUrl({ ...current, category: category === "All" ? undefined : category }))
     }
     return (
         <div className="flex items-center gap-2 flex-wrap lg:gap-3">
