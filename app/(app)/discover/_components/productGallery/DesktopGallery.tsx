@@ -73,9 +73,8 @@ export default function DesktopGallery({
           <ul
             className="flex flex-col gap-3 transition-transform duration-300 ease-out"
             style={{
-              transform: `translateY(-${
-                startIdx * ITEM_HEIGHT
-              }px)`,
+              transform: `translateY(-${startIdx * ITEM_HEIGHT
+                }px)`,
             }}
           >
             {images.map((image, index) => (
@@ -94,10 +93,9 @@ export default function DesktopGallery({
                     border 
                     transition-all duration-200
                     focus:outline-none
-                    ${
-                      activeIndex === index
-                        ? "border border-emerald-500"
-                        : "border-slate-200 hover:border-neutral-300"
+                    ${activeIndex === index
+                      ? "border border-emerald-500"
+                      : "border-slate-200 hover:border-neutral-300"
                     }
                   `}
                 >
@@ -138,22 +136,23 @@ export default function DesktopGallery({
 
       {/* Main Image */}
       <div
-  className="
+        className="
     relative
     w-full
     aspect-square
     overflow-hidden
     rounded-3xl
   "
->
-  <Image
-    src={images[activeIndex].url}
-    alt={images[activeIndex].alt ?? ""}
-    fill
-    priority
-    className="object-contain p-4"
-  />
-</div>
+      >
+        <Image
+          src={images[activeIndex].url}
+          alt={images[activeIndex].alt ?? ""}
+          fill
+          priority
+          className="object-contain p-4"
+
+        />
+      </div>
     </figure>
   );
 }

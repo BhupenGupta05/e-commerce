@@ -1,26 +1,17 @@
 import { PiExport, PiUserCircle } from "react-icons/pi";
 import Link from "next/link";
 import AppBreadcrumbs from "@/components/AppBreadcrumbs";
-import { getServerSession } from "next-auth";
-import authOptions from "@/lib/auth";
-import prisma from "@/lib/prisma";
-import { EVENT_TYPES } from "@/lib/events";
 import BackButton from "../../_components/BackButton";
 import { menu } from "../../_config/menu";
 import WishlistButton from "../../_components/WishlistButton";
+import { requireAuthSoft } from "@/lib/session";
+import { getProductMeta } from "../../[id]/_lib/queries";
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
+    const user = await requireAuthSoft();
 
-    const session = await getServerSession(authOptions);
-    const [product, existingSave] = await Promise.all([
-        prisma.product.findUnique({ where: { id }, select: { id: true, name: true } }),
-        session?.user?.id
-            ? prisma.userEvent.findFirst({
-                where: { userId: session.user.id, productId: id, eventType: EVENT_TYPES.SAVE },
-            })
-            : Promise.resolve(null),
-    ]);
+    const { product, existingSave } = await getProductMeta(id, user?.id);
 
     if (!product) return null;
 

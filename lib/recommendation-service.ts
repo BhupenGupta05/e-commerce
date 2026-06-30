@@ -1,17 +1,16 @@
 import { Category, Product } from "@prisma/client";
 import { EVENT_TYPES, EVENT_WEIGHTS } from "./events";
 import prisma from "./prisma";
-import { getServerSession } from "next-auth";
-import authOptions from "./auth";
+import { requireAuthSoft } from "./session";
 
 export async function getRecommendations(): Promise<Product[]> {
-    const session = await getServerSession(authOptions);
+    const user = await requireAuthSoft();
 
-    if (!session?.user?.id) {
+    if (!user?.id) {
         return [];
     }
 
-    const userId = session.user.id;
+    const userId = user.id;
 
     const [events, wishlistItems] = await Promise.all([
         prisma.userEvent.findMany({

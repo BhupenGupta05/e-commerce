@@ -30,12 +30,12 @@ const budgets: Option[] = [
   { id: "50k+", label: "₹50k+" },
 ];
 
-function Chip({ name, value, children }:
-  { name: string; value: string; children: React.ReactNode }
+function Chip({ name, value, type = "checkbox", children }:
+  { name: string; value: string; type?: "checkbox" | "radio"; children: React.ReactNode }
 ) {
   return (
     <label className="cursor-pointer">
-      <input type="checkbox" name={name} value={value} className="hidden peer" />
+      <input type={type} name={name} value={value} className="hidden peer" />
       <span className="peer-checked:bg-black peer-checked:text-white peer-checked:border-black rounded-full border border-zinc-300 px-4 py-2 text-sm block">
         {children}
       </span>
@@ -143,7 +143,7 @@ export default function Page() {
             </legend>
             <div className="flex flex-wrap gap-2">
               {budgets.map((b) => (
-                <Chip name="budget" value={b.id} key={b.id}>{b.label}</Chip>
+                <Chip name="budget" value={b.id} key={b.id} type="radio">{b.label}</Chip>
               ))}
             </div>
           </fieldset>

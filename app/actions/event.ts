@@ -1,59 +1,11 @@
 "use server";
 
-import { createEvent } from "@/lib/event-service";
 import { EVENT_TYPES } from "@/lib/events";
 import prisma from "@/lib/prisma";
-import { requireAuth } from "@/lib/session";
-
-export async function trackView(productId: string) {
-  const user = await requireAuth();
-
-  if (!user?.id) {
-    return {
-      success: false,
-      error: "unauthenticated" as const
-    }
-  }
-
-
-  try {
-    const thirtyMinutesAgo = new Date(
-      Date.now() - 30 * 60 * 1000
-    );
-
-    const existingView = await prisma.userEvent.findFirst({
-      where: {
-        userId: user.id,
-        productId,
-        eventType: EVENT_TYPES.VIEW,
-        createdAt: {
-          gte: thirtyMinutesAgo,
-        },
-      },
-    });
-
-    if (existingView) {
-      return {
-        success: true,
-        alreadyViewed: true,
-      };
-    }
-
-    await createEvent({
-      userId: user.id,
-      productId,
-      eventType: EVENT_TYPES.VIEW,
-    });
-
-    return { success: true };
-  } catch (err) {
-    console.error(err);
-    return { success: false };
-  }
-}
+import { getUser } from "@/lib/session";
 
 export async function trackSave(productId: string) {
-  const user = await requireAuth();
+  const user = await getUser();
 
   if (!user?.id) {
     return {

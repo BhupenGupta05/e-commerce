@@ -32,7 +32,7 @@ export default function ProductCard({
           className="
         object-cover
         transition-transform
-        duration-500
+        duration-300
         group-hover:scale-105
       "
         />

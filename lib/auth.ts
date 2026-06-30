@@ -38,6 +38,11 @@ const authOptions: NextAuthOptions = {
             // console.log({ session, user });
             
             return session;
+        },
+        // Needed on some next-auth versions even with database strategy
+  // to avoid a callback invocation error during OAuth flow
+        async jwt({ token }) {
+            return token;
         }
     },
     pages: {

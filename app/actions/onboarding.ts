@@ -18,18 +18,23 @@ export async function savePreferences(formData: FormData) {
         data: {
             onboardingStatus: "COMPLETED",
             preferences: {
-                create: {
-                    categories,
-                    vibes,
-                    budget,
+                upsert: {
+                    where: {
+                        userId: user.id
+                    },
+                    create: {
+                        categories,
+                        vibes,
+                        budget,
+                    },
+                    update: {
+                        categories,
+                        vibes,
+                        budget,
+                    },
                 },
-                update: {
-                    categories,
-                    vibes,
-                    budget,
-                }
-            }
-        }
+            },
+        },
     });
 
     redirect("/discover");

@@ -1,4 +1,10 @@
 import BottomNav from "@/components/BottomNav";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Discover",               
+  description: "Curated picks personalised to your taste.",
+};
 
 export default function MainLayout({
   children,

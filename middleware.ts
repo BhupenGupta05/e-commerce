@@ -12,12 +12,19 @@ export async function middleware(req: NextRequest) {
     if(PUBLIC.some(p => pathname === p)) return NextResponse.next();
 
     // Always allow anonymous-accessible routes (no token check needed)
-    if(ANONYMOUS_ALLOWED.some(p => pathname.startsWith(p))) {
-        return NextResponse.next();
-    }
+    if(ANONYMOUS_ALLOWED.some(p => pathname.startsWith(p))) return NextResponse.next();
 
-    const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
-    if(!token) {
+    const sessionCheckUrl = new URL("/api/auth/session-check", req.nextUrl.origin);
+
+    const sessionRes = await fetch(sessionCheckUrl.toString(), {
+        headers: {
+            cookie: req.headers.get("cookie") ?? "",
+        }
+    })
+
+    const { authenticated } = await sessionRes.json();
+
+    if(!authenticated) {
         const url = req.nextUrl.clone();
         url.pathname = "/login";
         url.searchParams.set("callback", pathname);

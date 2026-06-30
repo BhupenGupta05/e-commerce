@@ -16,7 +16,7 @@ export default function MoodCard({
     relative overflow-hidden 
     rounded-xl group transition-all 
     duration-300 ease-out hover:scale-105 
-    cursor-pointer"
+    cursor-pointer blur-xl"
     >
       <Link
         href={`/discover?mood=${mood.tag}`}>
@@ -27,6 +27,7 @@ export default function MoodCard({
           height={500}
           loading="lazy"
           className="h-auto w-full"
+
         />
 
         <div

@@ -1,32 +1,67 @@
-import { trackView } from "@/app/actions/event";
-import { EVENT_TYPES } from "@/lib/events";
-import prisma from "@/lib/prisma";
-import { getServerSession } from "next-auth";
-import authOptions from "@/lib/auth";
 import ProductDetails from "../_components/ProductDetails";
+import { after } from "next/server";
+import { requireAuthSoft } from "@/lib/session";
+import { getProductPageData } from "./_lib/queries";
+import { trackProductView } from "@/lib/analytics";
+import { notFound } from "next/navigation";
+import { Metadata } from "next";
+
+// Dynamic metadata for each product
+
+export async function generateMetadata(
+  { params }: { params: { id: string } }
+): Promise<Metadata> {
+  const {product} = await getProductPageData(params.id);
+
+  if (!product) {
+    // notFound() here keeps the 404 page's own metadata intact
+    return { title: "Product not found" };
+  }
+
+  const ogImage = product.imageUrl?.[0]
+    ? { url: product.imageUrl[0], alt: product.name }
+    : undefined;
+
+  return {
+    title: product.name,                       
+    description: product.description,
+    openGraph: {
+      title: product.name,
+      description: product.description,
+      type: "website",
+      ...(ogImage && { images: [ogImage] }),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: product.name,
+      description: product.description,
+      ...(ogImage && { images: [ogImage.url] }),
+    },
+  };
+}
+
+// There is a major performance bug here, user has to wait for trackview to finish but user doesn't know about it and it is expensive(two sequential DB calls), so we can do it in the background using after() (Could've used kafka but it introduces complexity for this app)
+// after() is process bound, meaning it runs inside the same process, so if the process restarts or crashes,
+// the tracking might be lost. 
+
+// Also, the session is check twice: once, here and again in requireAuth
+// So, we can cache it
+
+// Kafka decouples this entirely and it will execute the job atleast once 
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
-    const session = await getServerSession(authOptions);
+    const user = await requireAuthSoft();
 
-    await trackView(id);
+    // Earlier
+    // await trackView(id);
 
-    const [product, existingSave] = await Promise.all([
-        prisma.product.findUnique({ where: { id } }),
-        session?.user?.id
-            ? prisma.userEvent.findFirst({
-                where: {
-                    userId: session.user.id,
-                    productId: id,
-                    eventType: EVENT_TYPES.SAVE
-                },
-            })
-            : Promise.resolve(null),
-    ])
+    // Now
+    after(() => trackProductView(id));
 
-    if (!product) {
-        return <div>Product not found</div>
-    }
+    const { product, existingSave } = await getProductPageData(id, user?.id);
+
+    if (!product) notFound();
 
     return (
         <ProductDetails

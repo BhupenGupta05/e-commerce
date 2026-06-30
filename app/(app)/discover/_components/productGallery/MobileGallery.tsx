@@ -19,7 +19,7 @@ export default function MobileGallery({
     return <div>No images available</div>;
   }
   return (
-  <figure className="relative aspect-square w-full md:max-h-130 overflow-hidden">
+    <figure className="relative aspect-square w-full md:max-h-130 overflow-hidden">
       <Image
         src={images[activeIndex].url}
         alt={images[activeIndex].alt ?? ""}
@@ -51,8 +51,8 @@ export default function MobileGallery({
             aria-current={activeIndex === index}
             onClick={() => setActiveIndex(index)}
             className={`h-2 w-2 rounded-full transition-colors ${activeIndex === index
-                ? "bg-black"
-                : "bg-neutral-300"
+              ? "bg-black"
+              : "bg-neutral-300"
               }`}
           />
         ))}

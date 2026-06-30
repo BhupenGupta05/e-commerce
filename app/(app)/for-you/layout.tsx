@@ -1,6 +1,11 @@
 import BottomNav from "@/components/BottomNav";
 import HeaderNav from "@/components/HeaderNav";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "For You",              
+  description: "Personalized picks for you.",
+};
 
 export default function MainLayout({
   children,

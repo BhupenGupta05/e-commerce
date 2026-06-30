@@ -1,9 +1,9 @@
 import prisma from "@/lib/prisma";
 import WishlistPage from "./_components/WishlistPage";
-import { getUser } from "@/lib/session";
+import { requireAuth } from "@/lib/session";
 
 export default async function Page() {
-  const user = await getUser();
+  const user = await requireAuth();
 
   if(!user) return null;
 

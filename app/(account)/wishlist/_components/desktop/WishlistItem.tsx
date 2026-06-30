@@ -1,11 +1,8 @@
 import Image from "next/image";
 import { IoStar } from "react-icons/io5";
-
 import WishlistMatchBadge from "../MatchBadge";
 import WishlistTags from "../Tags";
-import WishlistFavoriteButton from "../Favourite";
 import WishlistActions from "../Actions";
-
 import { WishlistItemWithProduct } from "@/types/wishlist";
 import WishlistShare from "../Share";
 
@@ -14,7 +11,7 @@ interface Props {
 }
 
 export default function WishlistItem({ wishlistItem }: Props) {
-  
+
   return (
     <article
       className="
